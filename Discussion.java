@@ -3,14 +3,14 @@
  */
 
 public class Discussion extends Class {
-	String courseID;
 	int lectureNumber;
 	int[] days;
 	int[] startHour;
+	int[] startMinute;
 	int[] length;
 
-	public Discussion(String courseID, int lectureNumber, int[] days, int[] startHour, int[]length) {
-		this.courseID = courseID;
+	public Discussion(int lectureNumber, int[] days, int[] startHour, 
+			int[] startMinute, int[]length) {
 		this.lectureNumber = lectureNumber;
 		this.days = days;
 		this.startHour = startHour;
