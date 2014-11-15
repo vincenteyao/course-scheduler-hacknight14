@@ -30,17 +30,17 @@ public class CourseListing
 		    {
 		    	System.out.println("Enter course name");
 		    	courseID = input.nextLine();
-		    	System.out.println("Enter numbers of times course meets");
+		    	System.out.println("Enter numbers of times course " + (i + 1) + " meets");
 		    	numberOfTimes = input.nextInt();
 		    	days = new int[numberOfTimes];
 		    	startHour = new int[numberOfTimes];
 		    	startMinute = new int[numberOfTimes];
 		    	length = new int[numberOfTimes];
-		    	System.out.println("Enter course day. Monday = 1 - Friday = 5");
 	    		for(int j = 0; j < numberOfTimes; j++)
 	    		{
+		    		System.out.println("Enter course day. Monday = 1 - Friday = 5");
 		    		days[j] = input.nextInt();
-			    	System.out.println("Enter course start time - hour");
+			    	System.out.println("Enter course start time - hour (24 hour time)");
 			    	startHour[j] = input.nextInt();
 			    	System.out.println("Enter course start time - minute");
 			    	startMinute[j] = input.nextInt();

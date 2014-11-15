@@ -8,18 +8,13 @@
 
 public class Course {
 	private final String courseID;
-	private final int[] days;
-	private final int[] startHour;
-	private final int[] startMinute;
-	private final int[] length;
+	private final Lecture[] lectures;
+	private final Discussion[] discussions;
 
-	public Course(String courseID, int[] days, int[] startHour, 
-			int[] startMinute, int[] length) {
+	public Course(String courseID, Lecture[] lectures, Discussion[] discussions) {
 		this.courseID = courseID;
-		this.days = days;
-		this.startHour = startHour;
-		this.startMinute = startMinute;
-		this.length = length;
+		this.lectures = lectures;
+		this.discussions = discussions;
 		
 	}
 
@@ -34,15 +29,18 @@ public class Course {
 	}
 
 	/*
-	 * Name: getDays
-	 * Purpose: Returns an array containing all of the days.
+	 * Name: getLectures
+	 * Purpose: Returns an array containing all of the lectures.
 	 * Parameters: none
 	 * Return: int[]
 	 */
-	public int[] getDays() {
-		return days;
+	public Lecture[] getLectures() {
+		return lectures;
 	}
 
+	public Discussion[] getDiscussions() {
+		return discussions;
+	}
 
 	
 }
