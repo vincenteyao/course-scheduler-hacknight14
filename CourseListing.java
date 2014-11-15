@@ -11,7 +11,7 @@ public class CourseListing
 {
 	public static int numberOfClasses = 0;
 	public static String courseID;
-	public static int numberOfDays;
+	public static int numberOfTimes;
 	public static int[] days;
 	public static int[] startHour;
 	public static int[] startMinute;
@@ -30,10 +30,14 @@ public class CourseListing
 		    {
 		    	System.out.println("Enter course name");
 		    	courseID = input.nextLine();
-		    	System.out.println("Enter numbers of days course meets");
-		    	numberOfDays = input.nextInt();
+		    	System.out.println("Enter numbers of times course meets");
+		    	numberOfTimes = input.nextInt();
+		    	days = new int[numberOfTimes];
+		    	startHour = new int[numberOfTimes];
+		    	startMinute = new int[numberOfTimes];
+		    	length = new int[numberOfTimes];
 		    	System.out.println("Enter course day. Monday = 1 - Friday = 5");
-	    		for(int j = 0; j < numberOfDays; j++)
+	    		for(int j = 0; j < numberOfTimes; j++)
 	    		{
 		    		days[j] = input.nextInt();
 			    	System.out.println("Enter course start time - hour");
