@@ -4,14 +4,14 @@
  * This class stores the data for the class's name, days, and times.
  */
 
- import java.util.ArrayList
+ import java.util.Arrays
 
 public class Course {
 	private final String courseID;
-	private final List<int> days;
-	private final List<int> times;
+	private final int[] days;
+	private final int[] times;
 
-	public Course(String courseID, ArrayList<int> days, ArrayList<int> times) {
+	public Course(String courseID, int[] days, int[] times) {
 		this.courseID = courseID;
 		this.days = days;
 		this.times = times;
@@ -35,6 +35,46 @@ public class Course {
 	 */
 	public void setCourseID(String courseID) {
 		this.courseID = courseID;
+	}
+
+	/*
+	 * Name: getDays
+	 * Purpose: Returns an array containing all of the days.
+	 * Parameters: none
+	 * Return: int[]
+	 */
+	public int[] getDays() {
+		return days;
+	}
+
+	/*
+	 * Name: getTimes
+	 * Purpose: Returns array of ints containing times.
+	 * Parameters: none
+	 * Return: int[]
+	 */
+	public int[] getTimes() {
+		return times;
+	}
+
+	/*
+	 * Name: setDays
+	 * Purpose: Sets days of course to argument
+	 * Parameters: int[] days
+	 * Return: void
+	 */
+	public void setDays(int[] days) {
+		this.days = days;
+	}
+
+	/*
+	 * Name: setTimes
+	 * Purpose: Sets times of course to argument
+	 * Parameters: int[] days
+	 * Return: void
+	 */
+	public void setTimes(int[] times) {
+		this.times = times;
 	}
 
 }
